@@ -5,7 +5,7 @@ Home: https://github.com/guido-s/netmeta https://link.springer.com/book/10.1007/
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-netmeta-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-netmeta-feedstock/blob/main/LICENSE.txt)
 
 Summary: A comprehensive set of functions providing frequentist methods for network meta-analysis and supporting Schwarzer et al. (2015) <DOI:10.1007/978-3-319-21416-0>, Chapter 8 "Network Meta-Analysis": - frequentist network meta-analysis following Rücker (2012) <DOI:10.1002/jrsm.1058>; - net heat plot and design-based decomposition of Cochran's Q according to Krahn et al. (2013) <DOI:10.1186/1471-2288-13-35>; - measures characterizing the flow of evidence between two treatments by König et al. (2013) <DOI:10.1002/sim.6001>; - ranking of treatments (frequentist analogue of SUCRA) according to Rücker & Schwarzer (2015) <DOI:10.1186/s12874-015-0060-8>; - partial order of treatment rankings ('poset') and Hasse diagram for 'poset' (Carlsen & Bruggemann, 2014) <DOI:10.1002/cem.2569>; (Rücker & Schwarzer, 2017) <DOI:10.1002/jrsm.1270>; - split direct and indirect evidence to check consistency (Dias et al., 2010) <DOI:10.1002/sim.3767>, (Efthimiou et al., 2019) <DOI:10.1002/sim.8158>; - league table with network meta-analysis results; - additive network meta-analysis for combinations of treatments (Rücker et al., 2020) <DOI:10.1002/bimj.201800167>; - network meta-analysis of binary data using the Mantel-Haenszel or non-central hypergeometric distribution method (Efthimiou et al., 2019) <DOI:10.1002/sim.8158>; - 'comparison-adjusted' funnel plot (Chaimani & Salanti, 2012) <DOI:10.1002/jrsm.57>; - automated drawing of network graphs described in Rücker & Schwarzer (2016) <DOI:10.1002/jrsm.1143>; - rankograms and ranking by SUCRA; - contribution matrix as described in Papakonstantinou et al. (2018) <DOI:10.12688/f1000research.14770.3> and Davies et al. (2021) <arXiv:2107.02886>.
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15163&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-netmeta-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15163&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-netmeta-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -39,16 +39,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `r-netmeta` can be installed with:
+Once the `conda-forge` channel has been enabled, `r-netmeta` can be installed with `conda`:
 
 ```
 conda install r-netmeta
 ```
 
-It is possible to list all of the versions of `r-netmeta` available on your platform with:
+or with `mamba`:
+
+```
+mamba install r-netmeta
+```
+
+It is possible to list all of the versions of `r-netmeta` available on your platform with `conda`:
 
 ```
 conda search r-netmeta --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search r-netmeta --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search r-netmeta --channel conda-forge
+
+# List packages depending on `r-netmeta`:
+mamba repoquery whoneeds r-netmeta --channel conda-forge
+
+# List dependencies of `r-netmeta`:
+mamba repoquery depends r-netmeta --channel conda-forge
 ```
 
 
@@ -66,10 +91,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
