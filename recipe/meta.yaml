@@ -1,4 +1,4 @@
-{% set version = "2.5-0" %}
+{% set version = "2.6-0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/netmeta_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/netmeta/netmeta_{{ version }}.tar.gz
-  sha256: c2105297e790cf4aedd1edcae4f273ad2b2edd7a65444b509ea74ca2be01d91d
+  sha256: 97ea77d322d73f67532ea96cb7e68acffa61b88022ea4aa7971496ede75230f6
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
