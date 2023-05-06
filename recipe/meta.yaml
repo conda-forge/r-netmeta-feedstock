@@ -1,4 +1,4 @@
-{% set version = "2.8-1" %}
+{% set version = "2.8-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/netmeta_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/netmeta/netmeta_{{ version }}.tar.gz
-  sha256: f67116a4cb5eb702a3900c77fe74435ab4dbcb2660b175e3ae1a39498357b977
+  sha256: 9e973b54465c64e2623872493f6868e0138292110c9b233832255635ef9e588c
 
 build:
   merge_build_host: true  # [win]
@@ -49,12 +49,12 @@ test:
 about:
   home: https://github.com/guido-s/netmeta https://link.springer.com/book/10.1007/978-3-319-21416-0
   license: GPL-2.0-or-later
-  summary: "A comprehensive set of functions providing frequentist methods for network meta-analysis and supporting Schwarzer et al. (2015) <DOI:10.1007/978-3-319-21416-0>, Chapter 8 \"Network Meta-Analysis\": - frequentist network meta-analysis following Rücker (2012) <DOI:10.1002/jrsm.1058>; - net heat plot and design-based\
-    \ decomposition of Cochran's Q according to Krahn et al. (2013) <DOI:10.1186/1471-2288-13-35>; - measures characterizing the flow of evidence between two treatments by König et al. (2013) <DOI:10.1002/sim.6001>; - ranking of treatments (frequentist analogue of SUCRA) according to Rücker & Schwarzer (2015) <DOI:10.1186/s12874-015-0060-8>;\
-    \ - partial order of treatment rankings ('poset') and Hasse diagram for 'poset' (Carlsen & Bruggemann, 2014) <DOI:10.1002/cem.2569>; (Rücker & Schwarzer, 2017) <DOI:10.1002/jrsm.1270>; - split direct and indirect evidence to check consistency (Dias et al., 2010) <DOI:10.1002/sim.3767>, (Efthimiou et al., 2019) <DOI:10.1002/sim.8158>;\
-    \ - league table with network meta-analysis results; - additive network meta-analysis for combinations of treatments (Rücker et al., 2020) <DOI:10.1002/bimj.201800167>; - network meta-analysis of binary data using the Mantel-Haenszel or non-central hypergeometric distribution method (Efthimiou et al., 2019) <DOI:10.1002/sim.8158>;\
-    \ - 'comparison-adjusted' funnel plot (Chaimani & Salanti, 2012) <DOI:10.1002/jrsm.57>; - automated drawing of network graphs described in Rücker & Schwarzer (2016) <DOI:10.1002/jrsm.1143>; - rankograms and ranking by SUCRA; - contribution matrix as described in Papakonstantinou et al. (2018) <DOI:10.12688/f1000research.14770.3>\
-    \ and Davies et al. (2021) <arXiv:2107.02886>."
+  summary: "A comprehensive set of functions providing frequentist methods for network meta-analysis and supporting Schwarzer et al. (2015) <DOI:10.1007/978-3-319-21416-0>, Chapter 8 \"Network Meta-Analysis\": - frequentist network meta-analysis following Rücker (2012) <DOI:10.1002/jrsm.1058>; - net heat plot and design-based
+    decomposition of Cochran's Q according to Krahn et al. (2013) <DOI:10.1186/1471-2288-13-35>; - measures characterizing the flow of evidence between two treatments by König et al. (2013) <DOI:10.1002/sim.6001>; - ranking of treatments (frequentist analogue of SUCRA) according to Rücker & Schwarzer (2015) <DOI:10.1186/s12874-015-0060-8>;
+    - partial order of treatment rankings ('poset') and Hasse diagram for 'poset' (Carlsen & Bruggemann, 2014) <DOI:10.1002/cem.2569>; (Rücker & Schwarzer, 2017) <DOI:10.1002/jrsm.1270>; - split direct and indirect evidence to check consistency (Dias et al., 2010) <DOI:10.1002/sim.3767>, (Efthimiou et al., 2019) <DOI:10.1002/sim.8158>;
+    - league table with network meta-analysis results; - additive network meta-analysis for combinations of treatments (Rücker et al., 2020) <DOI:10.1002/bimj.201800167>; - network meta-analysis of binary data using the Mantel-Haenszel or non-central hypergeometric distribution method (Efthimiou et al., 2019) <DOI:10.1002/sim.8158>;
+    - 'comparison-adjusted' funnel plot (Chaimani & Salanti, 2012) <DOI:10.1002/jrsm.57>; - automated drawing of network graphs described in Rücker & Schwarzer (2016) <DOI:10.1002/jrsm.1143>; - rankograms and ranking by SUCRA; - contribution matrix as described in Papakonstantinou et al. (2018) <DOI:10.12688/f1000research.14770.3>
+    and Davies et al. (2021) <arXiv:2107.02886>."
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
