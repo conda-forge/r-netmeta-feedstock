@@ -25,19 +25,27 @@ requirements:
   host:
     - r-base
     - r-mass
-    - r-ggplot2 >=3.0.0
+    - r-matrix
+    - r-colorspace
+    - r-dplyr
+    - r-ggplot2
     - r-magic
-    - r-meta >=5.0_0
+    - r-magrittr
+    - r-meta >=8.0_1
     - r-metafor
-    - r-rmarkdown
+    - r-mvtnorm
   run:
     - r-base
     - r-mass
-    - r-ggplot2 >=3.0.0
+    - r-matrix
+    - r-colorspace
+    - r-dplyr
+    - r-ggplot2
     - r-magic
-    - r-meta >=5.0_0
+    - r-magrittr
+    - r-meta >=8.0_1
     - r-metafor
-    - r-rmarkdown
+    - r-mvtnorm
 
 test:
   commands:
