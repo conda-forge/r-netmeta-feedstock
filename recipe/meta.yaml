@@ -26,9 +26,12 @@ requirements:
     - r-base
     - r-mass
     - r-matrix
+    - r-rgraphviz
     - r-colorspace
     - r-dplyr
     - r-ggplot2
+    - r-graph
+    - r-igraph
     - r-magic
     - r-magrittr
     - r-meta >=8.0_1
@@ -38,9 +41,12 @@ requirements:
     - r-base
     - r-mass
     - r-matrix
+    - r-rgraphviz
     - r-colorspace
     - r-dplyr
     - r-ggplot2
+    - r-graph
+    - r-igraph
     - r-magic
     - r-magrittr
     - r-meta >=8.0_1
@@ -64,6 +70,7 @@ about:
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+    - LICENSE
 
 extra:
   recipe-maintainers:
