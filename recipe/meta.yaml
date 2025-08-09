@@ -17,6 +17,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -29,6 +33,7 @@ requirements:
     - r-colorspace
     - r-dplyr
     - r-ggplot2
+    - r-igraph
     - r-magic
     - r-magrittr
     - r-meta >=8.0_1
@@ -41,6 +46,7 @@ requirements:
     - r-colorspace
     - r-dplyr
     - r-ggplot2
+    - r-igraph
     - r-magic
     - r-magrittr
     - r-meta >=8.0_1
@@ -64,6 +70,7 @@ about:
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+    - LICENSE
 
 extra:
   recipe-maintainers:
