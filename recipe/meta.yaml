@@ -1,4 +1,4 @@
-{% set version = "3.2-0" %}
+{% set version = "3.3-1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/netmeta_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/netmeta/netmeta_{{ version }}.tar.gz
-  sha256: 42b43bb29ff80eee4b77bb5c86c95487e56eb65615b7687c345d9a94c83cf470
+  sha256: 796b7eb5b2379c9a60944dd0abba652e1365cf459a41a68aff3114cd844ca1e1
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
