@@ -3,7 +3,7 @@ About r-netmeta-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-netmeta-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/guido-s/netmeta https://link.springer.com/book/10.1007/978-3-319-21416-0
+Home: https://github.com/guido-s/netmeta
 
 Package license: GPL-2.0-or-later
 
@@ -13,10 +13,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15163&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-netmeta-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/r-netmeta-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/r-netmeta-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
