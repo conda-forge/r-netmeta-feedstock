@@ -3,7 +3,7 @@ About r-netmeta-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-netmeta-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/guido-s/netmeta https://link.springer.com/book/10.1007/978-3-319-21416-0
+Home: https://github.com/guido-s/netmeta
 
 Package license: GPL-2.0-or-later
 
