@@ -1,15 +1,15 @@
-{% set version = "3.6-0" %}
+{% set version = "3.6-1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-netmeta
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/netmeta_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/netmeta/netmeta_{{ version }}.tar.gz
-  sha256: ab455c79fc79525fe03ab598230b9a1ccaad2e620d767c429c8ca7b2edc344d2
+  sha256: 912c0fecff17dd337b9ef476ff34d03656edba685ca9d77e4d192f82f34de469
 
 build:
   number: 0
